@@ -33,6 +33,6 @@ class shear_stress():
     #Re = ((math.sqrt((s - 1) * g * D) * D) / v) #particle reynolds number
     #return (0.22 * (Re ** -0.6) + 0.06 * (10 ** (-7.7 * (Re ** -0.6)))) #critical shear stress
 
-stress = shear_stress(0.05)
-print(stress.Reynolds())
+Tc = shear_stress(0.05)
+print(Tc.Reynolds())
     
