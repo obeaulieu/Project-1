@@ -15,7 +15,7 @@ import math
 #inputs
 rho_s = 2.65 #input('Enter sediment density (g/cm3):') #sed density
 rho_f = 1.0 #input('Enter fluid density (g/cm3):') #fluid density
-D = 0.05 #input('Enter mean grain size (m):') #D50
+D = input('Enter mean grain size (m):') #input('Enter mean grain size (m):') #D50
 v = 1E-6 #kinematic viscosity 
 g = 9.8 #gravity
 s = rho_s / rho_f
@@ -33,6 +33,6 @@ class shear_stress():
     #Re = ((math.sqrt((s - 1) * g * D) * D) / v) #particle reynolds number
     #return (0.22 * (Re ** -0.6) + 0.06 * (10 ** (-7.7 * (Re ** -0.6)))) #critical shear stress
 
-Tc = shear_stress(0.05)
+Tc = shear_stress(D)
 print(Tc.Reynolds())
-    
+
