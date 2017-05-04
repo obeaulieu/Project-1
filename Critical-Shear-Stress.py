@@ -6,7 +6,7 @@ Created on Tue May  2 16:25:58 2017
 @author: livbeaulieu30
 """
 
-#Finding Critical Shear Stress 
+#Finding dimensionless Critical Shear Stress 
 
 import numpy as np
 import math
@@ -27,12 +27,12 @@ class shear_stress():
 
     def Reynolds(self):
         self.Re = ((math.sqrt((s - 1) * g * self.D) * self.D) / v)  #particle reynolds number
-        return (0.22 * (self.Re ** -0.6) + 0.06 * (10 ** (-7.7 * (self.Re ** -0.6)))) #critical shear stress
+        return (0.22 * (self.Re ** -0.6) + 0.06 * (10 ** (-7.7 * (self.Re ** -0.6)))) #dimensionless critical shear stress
         
 #def shields():
     #Re = ((math.sqrt((s - 1) * g * D) * D) / v) #particle reynolds number
     #return (0.22 * (Re ** -0.6) + 0.06 * (10 ** (-7.7 * (Re ** -0.6)))) #critical shear stress
 
-Tc = shear_stress(D)
+Tc = shear_stress(D) #dimensionless critical shear stress
 print(Tc.Reynolds())
 
